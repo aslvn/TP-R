@@ -1,6 +1,6 @@
-# Lab3 : Clustering
+# Clustering
 
-# Consider the letter iris set
+#  iris set
 
 	DS = iris
 	print(summary(DS))
@@ -62,11 +62,4 @@ n = 150
 # plot Within SS for Learn and Test samples
 	plot(devs.L,type="l",xlab="Number of Clusters",ylab="Total Within SS")
 	points(devs.T,type="l",col="blue")
-# add a penalty to teh deviance
-	pen = 10*sqrt(1:K)
-	lim = range(c(devs.L, devs.T)+ pen,na.rm=T)
-	plot(devs.L + pen,type="l",xlab="Number of Clusters",ylab="Total Within SS",ylim=lim)
-	points(devs.T + pen ,type="l",col="blue")
 
-# plot Mismach Error
-	plot(errs,type="l")
